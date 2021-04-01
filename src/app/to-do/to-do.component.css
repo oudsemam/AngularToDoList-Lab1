@@ -17,10 +17,15 @@ ol {
 }
 
 li {
-    display: flex;
-    justify-content: space-between;
+    display: list-item;
     margin-bottom: 5px;
     width: 100%;
+    border:1px solid red;
+}
+
+span {
+    display: flex;
+    justify-content: space-between;
 }
 
 .add {
@@ -71,4 +76,8 @@ li {
     background: none;
     border: none;
     padding: 5px;
+}
+
+.strikethrough {
+
 }
