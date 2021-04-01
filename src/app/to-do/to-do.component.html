@@ -6,10 +6,11 @@
         <input class='input' placeholder="Filter your to-dos">
         
             <ol>
-            <li *ngFor = 'let name of todo; let i = index'>
-                <button class='complete' >Complete</button> 
-                <p>{{name.task}}</p>
-                <button class='x'><fa-icon [icon]="faCoffee"></fa-icon></button>                
+            <li *ngFor = 'let todo of todos; let i = index'>
+                <p class= 'right-margin'>{{i + 1}}.</p>
+                <button *ngIf='!todo.completed' class='complete'>Complete</button> 
+                <p [ngClass] = '{strike: todo.completed}' >{{todo.task}}</p>
+                <button class='x' ><fa-icon [icon]="faCoffee"></fa-icon></button>                
             </li>   
             </ol>
 

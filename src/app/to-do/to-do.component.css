@@ -17,10 +17,15 @@ ol {
 }
 
 li {
-    display: list-item;
+    display: flex;
     margin-bottom: 5px;
     width: 100%;
-    border:1px solid red;
+    position: relative;
+}
+
+li .x {
+    position: absolute;
+    right:5px
 }
 
 span {
@@ -72,12 +77,16 @@ span {
     justify-content: left;
 }
 
+.right-margin {
+    margin-right: 5px;
+}
+
 .x {
     background: none;
     border: none;
     padding: 5px;
 }
 
-.strikethrough {
-
+.strike {
+    text-decoration: line-through;
 }

@@ -16,7 +16,7 @@ export class ToDoComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  todo: Todo[] = [
+  todos: Todo[] = [
     { task: 'dishes', completed: false },
     { task: 'wash the dog', completed: false },
     { task: 'make the bed', completed: true },
