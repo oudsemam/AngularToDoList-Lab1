@@ -1,0 +1,21 @@
+
+<main class='gradient'>
+    <div class='box'>
+        <h1>TODO List</h1>
+        <h3>A place to store your todos.</h3>
+        <input class='input' placeholder="Filter your to-dos">
+        
+            <ol>
+            <li *ngFor = 'let name of todo; let i = index'>
+                <span class="list">
+                <button class='complete'>Complete</button> 
+                {{name.task}}
+                </span>
+                <button class='x'><fa-icon [icon]="faCoffee"></fa-icon></button>
+            </li>   
+            </ol>
+
+        <input class='input' placeholder='Add your to-dos'>
+        <button class='gradient add'>Add</button>
+    </div>
+</main>
