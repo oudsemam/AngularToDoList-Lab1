@@ -3,10 +3,10 @@
     <div class='box'>
         <h1>TODO List</h1>
         <p>A place to store your todos.</p>
-        <input class='input' placeholder="Filter your to-dos">
+        <input [(ngModel)]='searchText' class='input' placeholder="Filter your to-dos"/>
         
             <ol>
-            <li *ngFor = 'let todo of todos; let i = index'>
+            <li *ngFor = 'let todo of todos | filter:searchText; let i = index'>
                 <p class= 'right-margin'>{{i + 1}}.</p>
                 <button *ngIf='!todo.completed' class='complete'>Complete</button> 
                 <p [ngClass] = '{strike: todo.completed}' >{{todo.task}}</p>

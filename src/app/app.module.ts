@@ -5,12 +5,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { ToDoComponent } from './to-do/to-do.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FilterPipe } from './filter.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ToDoComponent
+    ToDoComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
