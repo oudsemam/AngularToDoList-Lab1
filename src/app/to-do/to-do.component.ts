@@ -11,7 +11,7 @@ import { faClipboardCheck, faCoffee } from '@fortawesome/free-solid-svg-icons';
 })
 export class ToDoComponent implements OnInit {
   faCoffee = faClipboardCheck;
-  
+
   todos: Todo[] = [
     { task: 'dishes', completed: false },
     { task: 'wash the dog', completed: false },
@@ -21,6 +21,12 @@ export class ToDoComponent implements OnInit {
   ];
 
   searchText: string | null = null;
+
+  newTask: string = '';
+
+  onClick(){
+    this.todos.push({ task: this.newTask, completed: false });
+  }
 
   constructor() {}
 
